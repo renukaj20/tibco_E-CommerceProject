@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:tns="http://www.eniquesolutions.com/Shipment/concrete" xmlns:tns0="http://www.eniquesolutions.com/Shipment" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Shipment_concrete" targetNamespace="http://www.eniquesolutions.com/Shipment/concrete" tibex:src="file:/C:/Trainingbw6_project/E-commerce_wsdl/Shipment_gen1.wsdl">
+    
+  <wsdl:types>
+        
+    <xsd:schema xmlns:tns="http://www.eniquesolutions.com/Shipment" elementFormDefault="qualified" targetNamespace="http://www.eniquesolutions.com/Shipment">
+            
+      <xsd:element name="ShipResquest" type="tns:ShipRequestType"/>
+            
+      <xsd:element name="ShipmentResponse" type="tns:ShipResponseType"/>
+            
+      <xsd:complexType name="ShipRequestType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="ORDER_ID" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_STATUS" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="ShipResponseType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="Status" type="xsd:string"/>
+                    
+          <xsd:element name="Response" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+          
+    </xsd:schema>
+      
+  </wsdl:types>
+    
+  <wsdl:message name="TrackShipmentRequest">
+        
+    <wsdl:part element="tns0:ShipResquest" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="TrackShipmentResponse">
+        
+    <wsdl:part element="tns0:ShipmentResponse" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:portType name="Shipment">
+        
+    <wsdl:operation name="TrackShipment">
+            
+      <wsdl:input message="tns:TrackShipmentRequest"/>
+            
+      <wsdl:output message="tns:TrackShipmentResponse"/>
+          
+    </wsdl:operation>
+      
+  </wsdl:portType>
+    
+  <wsdl:binding name="SOAPServiceBinding" type="tns:Shipment">
+        
+    <soap:binding style="document" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+        
+    <jms:binding messageFormat="text"/>
+        
+    <wsdl:operation name="TrackShipment">
+            
+      <soap:operation soapAction="TrackShipment" style="document"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+      
+  </wsdl:binding>
+    
+  <wsdl:service name="Shipment_concrete">
+        
+    <wsdl:port binding="tns:SOAPServiceBinding" name="Shipment_concreteSOAP">
+            
+      <soap:address location=""/>
+            
+      <jms:connectionFactory/>
+            
+      <jms:targetAddress destination="queue">jmspractice.queue1</jms:targetAddress>
+          
+    </wsdl:port>
+      
+  </wsdl:service>
+  
+</wsdl:definitions>

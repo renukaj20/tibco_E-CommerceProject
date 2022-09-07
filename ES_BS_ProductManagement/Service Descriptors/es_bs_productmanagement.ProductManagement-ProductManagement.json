@@ -1,0 +1,198 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ProductManagement",
+    "description" : "ProductManagement service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/getallproduct" : {
+      "post" : {
+        "summary" : "postProductManagement",
+        "description" : "postProductManagement",
+        "operationId" : "post-getallproduct",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/GetallProductReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetAllproductResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetAllproductResp"
+            }
+          }
+        }
+      }
+    },
+    "/getproductBycategory" : {
+      "post" : {
+        "summary" : "postProductManagement",
+        "description" : "postProductManagement",
+        "operationId" : "post-getproductBycategory",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/GetproductByCategoriesReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetproductByCategoriesResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetproductByCategoriesResp"
+            }
+          }
+        }
+      }
+    },
+    "/getIndividualproduct" : {
+      "post" : {
+        "summary" : "postProductManagement",
+        "description" : "postProductManagement",
+        "operationId" : "post-getIndividualproduct",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/GetIndividualproductReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetIndividualProductResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetIndividualProductResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "GetAllproductResp" : {
+      "type" : "object",
+      "properties" : {
+        "Products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Products",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "GetIndividualproductReq" : {
+      "type" : "object",
+      "required" : [ "PRODUCT_ID" ],
+      "properties" : {
+        "PRODUCT_ID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Products" : {
+      "type" : "object",
+      "required" : [ "BRAND_ID", "CATEGORY_ID", "LIST_PRICE", "MODEL_YEAR", "PRODUCT_ID", "PRODUCT_NAME" ],
+      "properties" : {
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "PRODUCT_NAME" : {
+          "type" : "string"
+        },
+        "BRAND_ID" : {
+          "type" : "string"
+        },
+        "CATEGORY_ID" : {
+          "type" : "string"
+        },
+        "MODEL_YEAR" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetproductByCategoriesReq" : {
+      "type" : "object",
+      "required" : [ "CATEGORY_ID" ],
+      "properties" : {
+        "CATEGORY_ID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetproductByCategoriesResp" : {
+      "type" : "object",
+      "properties" : {
+        "Products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Products",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "GetallProductReq" : {
+      "type" : "object",
+      "required" : [ "USER_ID", "PRODUCT_ID" ],
+      "properties" : {
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "USER_ID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetIndividualProductResp" : {
+      "type" : "object",
+      "required" : [ "BRAND_ID", "CATEGORY_ID", "LIST_PRICE", "MODEL_YEAR", "ResposeMsg", "PRODUCT_ID", "PRODUCT_NAME" ],
+      "properties" : {
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "PRODUCT_NAME" : {
+          "type" : "string"
+        },
+        "BRAND_ID" : {
+          "type" : "string"
+        },
+        "CATEGORY_ID" : {
+          "type" : "string"
+        },
+        "MODEL_YEAR" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        },
+        "ResposeMsg" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

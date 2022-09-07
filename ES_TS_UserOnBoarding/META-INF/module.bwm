@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:CreateAccount="http://www.eniquesolutions.com/CreateAccount" xmlns:ES_SessionHander="http://www.eniquesolutions/ES_SessionHander" xmlns:TS_Create_Account="http://www.eniquesolutions.com/TS_Create_Account/" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:create_account="http://www.eniquesolutions.com/create_account" xmlns:pt="http://www.tibco.com/Accounts/" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_ymH90NG4EeyMmNqV9e8GUA" targetNamespace="http://tns.tibco.com/bw/composite/ES_TS_UserOnBoarding" name="ES_TS_UserOnBoarding" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_Y-AsktKnEeyqV6OuvJH1Lw" name="Accounts" promote="ComponentAccount_Service/Accounts">
+    <sca:interface.wsdl xmi:id="_Y-B6stKnEeyqV6OuvJH1Lw" interface="http://www.tibco.com/Accounts/#wsdl.interface(Accounts)" scaext:wsdlLocation="../../ES_Common_Model/Service%20Descriptors/Accounts.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_auE8ANKnEeyqV6OuvJH1Lw" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/e267200838794b6a82a4ceaed42c359a/SOAPServiceBinding" portTypeQName="pt:Accounts" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+      <bindingType xmi:id="_auE8AdKnEeyqV6OuvJH1Lw" style="RPC"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_ge5C8OfCEeys6LXpSqdetQ" jmsResource="es_common_model.JMSConnectionResource" destination="eniquesolutions.Es_Ts_useronboarding.modulequeue" messageType="Text"/>
+      <operationConfiguration xmi:id="_auE8AtKnEeyqV6OuvJH1Lw" operationName="CreateAccount" action="CreateAccount" actionNeeded="true">
+        <bindingType xmi:id="_auE8A9KnEeyqV6OuvJH1Lw"/>
+        <messageConfiguration xmi:id="_auE8BNKnEeyqV6OuvJH1Lw" messageQName="pt:CreateAccountRequest" wsdlLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_auE8BdKnEeyqV6OuvJH1Lw" partName="parameters" partElementName="ES_SessionHander:CreateAccountReq"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_auE8BtKnEeyqV6OuvJH1Lw" messageQName="pt:CreateAccountResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_auE8B9KnEeyqV6OuvJH1Lw" partName="parameters" partElementName="ES_SessionHander:CreateAccountResp"/>
+        </messageConfiguration>
+        <context xmi:id="_auE8GtKnEeyqV6OuvJH1Lw">
+          <inputMapping xmi:id="_auE8G9KnEeyqV6OuvJH1Lw"/>
+          <outputMapping xmi:id="_auE8HNKnEeyqV6OuvJH1Lw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_auE8CNKnEeyqV6OuvJH1Lw" operationName="GetAccountDetails" action="GetAccountDetails" actionNeeded="true">
+        <bindingType xmi:id="_auE8CdKnEeyqV6OuvJH1Lw"/>
+        <messageConfiguration xmi:id="_auE8CtKnEeyqV6OuvJH1Lw" messageQName="pt:GetAccountDetailsRequest" wsdlLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_auE8C9KnEeyqV6OuvJH1Lw" partName="parameters" partElementName="ES_SessionHander:GetAccountDetailsReq"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_auE8DNKnEeyqV6OuvJH1Lw" messageQName="pt:GetAccountDetailsResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_auE8DdKnEeyqV6OuvJH1Lw" partName="parameters" partElementName="ES_SessionHander:GetAccountDetailsResp"/>
+        </messageConfiguration>
+        <context xmi:id="_auFjENKnEeyqV6OuvJH1Lw">
+          <inputMapping xmi:id="_auFjEdKnEeyqV6OuvJH1Lw"/>
+          <outputMapping xmi:id="_auFjEtKnEeyqV6OuvJH1Lw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_auE8DtKnEeyqV6OuvJH1Lw" operationName="UpdateAccount" action="UpdateAccount" actionNeeded="true">
+        <bindingType xmi:id="_auE8D9KnEeyqV6OuvJH1Lw"/>
+        <messageConfiguration xmi:id="_auE8ENKnEeyqV6OuvJH1Lw" messageQName="pt:UpdateAccountRequest" wsdlLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_auE8EdKnEeyqV6OuvJH1Lw" partName="parameters" partElementName="ES_SessionHander:UpdateAccountReq"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_auE8EtKnEeyqV6OuvJH1Lw" messageQName="pt:UpdateAccountResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_auE8E9KnEeyqV6OuvJH1Lw" partName="parameters" partElementName="ES_SessionHander:UpdateAccountResp"/>
+        </messageConfiguration>
+        <context xmi:id="_auFjE9KnEeyqV6OuvJH1Lw">
+          <inputMapping xmi:id="_auFjFNKnEeyqV6OuvJH1Lw"/>
+          <outputMapping xmi:id="_auFjFdKnEeyqV6OuvJH1Lw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_auE8FNKnEeyqV6OuvJH1Lw" operationName="DeactiveAccount" action="DeactiveAccount" actionNeeded="true">
+        <bindingType xmi:id="_auE8FdKnEeyqV6OuvJH1Lw"/>
+        <messageConfiguration xmi:id="_auE8FtKnEeyqV6OuvJH1Lw" messageQName="pt:DeactiveAccountRequest" wsdlLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_auE8F9KnEeyqV6OuvJH1Lw" partName="parameters" partElementName="ES_SessionHander:DeactiveAccountReq"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_auE8GNKnEeyqV6OuvJH1Lw" messageQName="pt:DeactiveAccountResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/ES_Common_Model/Service%20Descriptors/Accounts.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_auE8GdKnEeyqV6OuvJH1Lw" partName="parameters" partElementName="ES_SessionHander:DeactiveAccountResp"/>
+        </messageConfiguration>
+        <context xmi:id="_auFjFtKnEeyqV6OuvJH1Lw">
+          <inputMapping xmi:id="_auFjF9KnEeyqV6OuvJH1Lw"/>
+          <outputMapping xmi:id="_auFjGNKnEeyqV6OuvJH1Lw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_auFjGdKnEeyqV6OuvJH1Lw" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_zcY3cNG4EeyMmNqV9e8GUA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zciBYNG4EeyMmNqV9e8GUA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zcp9MNG4EeyMmNqV9e8GUA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zcx5ANG4EeyMmNqV9e8GUA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zc3_oNG4EeyMmNqV9e8GUA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zc9fMNG4EeyMmNqV9e8GUA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zdEz8NG4EeyMmNqV9e8GUA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zdKTgNG4EeyMmNqV9e8GUA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zdPzENG4EeyMmNqV9e8GUA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_Y9-3YNKnEeyqV6OuvJH1Lw" name="ComponentAccount_Service" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Y9-3YdKnEeyqV6OuvJH1Lw" processName="ES_TS_useronboarding.Account_Service"/>
+    <sca:service xmi:id="_Y-AskNKnEeyqV6OuvJH1Lw" name="Accounts">
+      <sca:interface.wsdl xmi:id="_Y-AskdKnEeyqV6OuvJH1Lw" interface="http://www.tibco.com/Accounts/#wsdl.interface(Accounts)" scaext:wsdlLocation="../../ES_Common_Model/Service%20Descriptors/Accounts.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

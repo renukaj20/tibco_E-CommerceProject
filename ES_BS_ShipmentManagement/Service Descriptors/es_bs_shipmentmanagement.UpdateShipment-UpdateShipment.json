@@ -1,0 +1,65 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "UpdateShipment",
+    "description" : "UpdateShipment service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/updateshipment" : {
+      "post" : {
+        "summary" : "postUpdateShipment",
+        "description" : "postUpdateShipment",
+        "operationId" : "post-updateshipment",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/ShipResquest"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a ShipmentResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ShipmentResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ShipmentResponse" : {
+      "type" : "object",
+      "required" : [ "Status", "Response" ],
+      "properties" : {
+        "Status" : {
+          "type" : "string"
+        },
+        "Response" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ShipResquest" : {
+      "type" : "object",
+      "required" : [ "ORDER_ID", "ORDER_STATUS" ],
+      "properties" : {
+        "ORDER_ID" : {
+          "type" : "string"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

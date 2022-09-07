@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolutions.com/CreateAccount" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.eniquesolutions.com/CreateAccount">
+
+  <complexType name="CreateAccountReqType">
+        	
+    <sequence>
+          		
+      <element name="UserId" type="string"/>
+          		
+      <element name="Firstname" type="string"/>
+          		
+      <element name="Lastname" type="string"/>
+          		
+      <element name="Email" type="string"/>
+          		
+      <element name="Phonenumber" type="string"/>
+          		
+      <element name="Address" type="string"/>
+          		
+      <element name="Requestmsg" type="string"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="CreateAccountReq" type="tns:CreateAccountReqType">
+    </element>
+      
+       
+  <complexType name="CreateAccountRespType">
+        	
+    <sequence>
+          		
+      <element name="UserId" type="string"/>
+          		
+      <element name="Firstname" type="string"/>
+          		
+      <element name="Lastname" type="string"/>
+          		
+      <element name="Email" type="string"/>
+          		
+      <element name="Phonenumber" type="string"/>
+          		
+      <element name="Address" type="string"/>
+          		
+      <element name="Responsemsg" type="string"/>
+          	
+    </sequence>
+           
+  </complexType>
+      
+  <element name="CreateAccountResp" type="tns:CreateAccountRespType">
+    </element>
+      
+    
+  <complexType name="GetAccountDetailsReqType">
+        	
+    <sequence>
+          		
+      <element name="UserId" type="string"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="GetAccountDetailsReq" type="tns:GetAccountDetailsReqType">
+    </element>
+      
+       
+  <complexType name="GetAccountDetailsRespType">
+        	
+    <sequence>
+          		
+      <element name="UserId" type="string"/>
+          		
+      <element name="Firstname" type="string"/>
+          		
+      <element name="Lastname" type="string"/>
+          		
+      <element name="Email" type="string"/>
+          		
+      <element name="Phonenumber" type="string"/>
+          		
+      <element name="Address" type="string"/>
+          		
+      <element name="Responsemsg" type="string"/>
+          	
+    </sequence>
+           
+  </complexType>
+      
+  <element name="GetAccountDetailsResp" type="tns:GetAccountDetailsRespType">
+    </element>
+      
+  <complexType name="CreateAccountRespArray">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="CreateAccountResp" type="tns:CreateAccountRespType"/>
+    </sequence>
+  </complexType>
+      
+  <element name="CreateAccountRespArray" type="tns:CreateAccountRespArray"/>
+                                    
+  
+  
+  
+  
+  
+
+</schema>

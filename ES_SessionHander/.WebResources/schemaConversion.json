@@ -1,0 +1,62 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.SessionHandling-SessionHandling.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/schema/1651647372857"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.SessionHandling-SessionHandling.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.Session_Handling-Session_Handling.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.LoginProcess_sessionHandler-LoginProcess_sessionHandler.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.LogoutProcess_sessionHandler-LogoutProcess_sessionHandler.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.CreateSession_sessionHandler-CreateSession_sessionHandler.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.loginprocess_sessonhandler-loginprocess_sessonhandler.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.Validatesesion-Validatesesion.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.ValidateSession-ValidateSession.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.loginprocess_sessonhandler-loginprocess_sessionhandler.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.Login_Process-Login_Process.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHandler/Service Descriptors/es_sessionhander.Resource-Resource.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+    }
+]}

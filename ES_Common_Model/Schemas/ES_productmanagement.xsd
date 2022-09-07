@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolutions.com/Es_ProductManagement" elementFormDefault="qualified" targetNamespace="http://www.eniquesolutions.com/Es_ProductManagement">
+                  
+  
+  
+  
+  
+  
+  
+ 
+                
+  
+  
+  
+  
+  
+  
+  
+  <element name="AddproductResp" type="tns:AddproductRespType"/>
+                 
+  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="AddproductRespType">
+                                                                                            
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="1" name="Payload" type="string"/>
+                                                  
+    
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                                                
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="DeleteproductReqType">
+                                 
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_ID" type="string"/>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                    
+  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="DeleteproductRespType">
+                                 
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                            	
+      
+      
+      
+      <element name="PRODUCT_ID" type="string"/>
+                            	
+      
+      
+      
+      <element name="RESPONSE_MSG" type="string"/>
+                            
+    
+    
+    
+    </sequence>
+                  
+  
+  
+  
+  </complexType>
+                   
+  
+  
+  
+  
+  
+  
+  
+  
+  <element name="DeleteproductReq" type="tns:DeleteproductReqType"/>
+                 
+  
+  
+  
+  
+  
+  
+  
+  
+  <element name="DeleteproductResp" type="tns:DeleteproductRespType">
+    </element>
+                 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="UpdateproductReqType">
+                                   
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                                                                                                        		
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_ID" type="string"/>
+                                                       
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_NAME" type="string"/>
+                                                       
+      
+      
+      
+      
+      
+      
+      
+      <element name="BRAND_ID" type="string"/>
+                                                          
+      
+      
+      
+      
+      
+      
+      
+      <element name="CATEGORY_ID" type="string"/>
+                                                         
+      
+      
+      
+      
+      
+      
+      
+      <element name="MODEL_YEAR" type="string"/>
+                                                       
+      
+      
+      
+      
+      
+      
+      
+      <element name="LIST_PRICE" type="string"/>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                    
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                   
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="UpdateproductRespType">
+                                     
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                        
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_ID" type="string"/>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="RESPONSE_MSG" type="string"/>
+                                                     
+    
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                   
+  
+  
+  
+  
+  
+  
+  
+  
+  <element name="UpdateproductReq" type="tns:UpdateproductReqType"/>
+                   
+  
+  
+  
+  
+  
+  
+  
+  
+  <element name="UpdateproductResp" type="tns:UpdateproductRespType">
+    </element>
+                   
+  
+  
+  
+  
+  
+               
+  
+  
+  
+  
+  
+  
+               
+  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="GetAllproductRespType">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="unbounded" minOccurs="0" name="Products" type="tns:ProductDetailsReqType"/>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                   
+  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                   
+  
+  
+  
+  
+  
+  
+  
+  
+  <element name="GetAllproductResp" type="tns:GetAllproductRespType">
+  </element>
+                      
+  
+  
+  
+  
+  
+              
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="ProductDetailsReqType">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                           
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_ID" type="string"/>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_NAME" type="string"/>
+                                                                      	
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="BRAND_ID" type="string"/>
+                                                                      	
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="CATEGORY_ID" type="string"/>
+                                                                      	
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="MODEL_YEAR" type="string"/>
+                                                                      	
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="LIST_PRICE" type="string"/>
+                                                                      	
+          
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                              
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                                                
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="GetproductByCategoriesReqType">
+                                                                                            	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                                                                                                        		
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="CATEGORY_ID" type="string"/>
+                                                                                                                                        	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                                                                            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                                                
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="GetIndividualproductReqType">
+                                                                                            	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                                                                                                        		
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_ID" type="string"/>
+                                                 
+    
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="GetIndividualproductRespType">
+                                     
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                            	
+      
+      
+      
+      <element name="PRODUCT_ID" type="string"/>
+                            	
+      
+      
+      
+      <element name="PRODUCT_NAME" type="string"/>
+                            	
+      
+      
+      
+      <element name="BRAND_ID" type="string"/>
+                            	
+      
+      
+      
+      <element name="CATEGORY_ID" type="string"/>
+                            	
+      
+      
+      
+      <element name="MODEL_YEAR" type="string"/>
+                            	
+      
+      
+      
+      <element name="LIST_PRICE" type="string"/>
+                            	
+      
+      
+      
+      <element name="ResposeMsg" type="string"/>
+                            
+    
+    
+    
+    </sequence>
+                  
+  
+  
+  
+  </complexType>
+                 
+  
+  
+  
+  
+  
+  
+  
+  
+  <element name="GetIndividualproductReq" type="tns:GetIndividualproductReqType">
+  </element>
+          
+  
+  
+  
+  <element name="GetIndividualProductResp" type="tns:GetIndividualproductRespType">
+
+  </element>
+          
+  
+  
+  
+  <element name="GetproductByCategoriesReq" type="tns:GetproductByCategoriesReqType">
+    </element>
+                     
+  
+  
+  
+  
+  
+  
+  
+  
+  <element name="GetproductByCategoriesResp" type="tns:GetAllproductRespType">
+    </element>
+                    
+  
+  
+  
+  
+  
+  
+  
+  
+  <element name="ProductDetailsReq" type="tns:ProductDetailsReqType"/>
+    
+  <complexType name="AddproductReqType">
+                                     
+    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="filename" type="string"/>
+                                                   
+    
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                   
+  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                  
+  
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+  <complexType name="AddIndividualReqType">
+                                     
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_ID" type="string"/>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <element name="PRODUCT_NAME" type="string"/>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <element name="BRAND_ID" type="string"/>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="CATEGORY_ID" type="string"/>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <element name="MODEL_YEAR" type="string"/>
+                                                   
+      
+      
+      
+      
+      
+      
+      
+      
+      <element name="LIST_PRICE" type="string"/>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="Response" type="string"/>
+                                             
+    
+    
+    
+    
+    </sequence>
+                
+  
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                        
+
+
+  
+  
+    
+
+
+    
+  
+
+
+
+  
+  
+  
+  
+  <element name="AddIndividualReq" type="tns:ProductDetailsReqType"/>
+          
+  
+  
+  
+  <complexType name="AddIndividualRespType">
+                  	
+    
+    
+    
+    <sequence>
+                          		
+      
+      
+      
+      <element name="Response" type="string"/>
+                          	
+    
+    
+    
+    </sequence>
+                  
+  
+  
+  
+  </complexType>
+          
+  
+  
+  
+  <element name="AddIndividualResp" type="tns:AddIndividualRespType"/>
+            
+  
+  
+  
+            
+  
+  
+  
+        
+    
+      
+
+
+  
+    
+  
+
+
+  <element name="AddproductReq" type="tns:AddproductReqType"></element>
+
+
+  <complexType name="GetAllProductReqType">
+  	<sequence>
+  		<element name="PRODUCT_ID" type="string"></element>
+  		<element name="USER_ID" type="string"></element>
+  	</sequence>
+  </complexType>
+
+  <element name="GetAllProductReq" type="tns:GetAllProductReqType"></element>
+</schema>

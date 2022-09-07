@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/Accounts/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Accounts" targetNamespace="http://www.tibco.com/Accounts/" xmlns:xsd1="http://www.eniquesolutions/ES_SessionHander">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/Accounts/">
+      <xsd:element name="CreateAccount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateAccountResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Account">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AccountResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeactivateAccount">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeactivateAccountResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetAccountDetails">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetAccountDetailsResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateAccount">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateAccountResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeactiveAccount">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeactiveAccountResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import
+    		namespace="http://www.eniquesolutions/ES_SessionHander"
+    		schemaLocation="../Schemas/ES_SessionHander.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="CreateAccountRequest">
+    <wsdl:part element="xsd1:CreateAccountReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CreateAccountResponse">
+    <wsdl:part element="xsd1:CreateAccountResp" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="AccountRequest">
+  	<wsdl:part name="parameters" element="tns:Account"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AccountResponse">
+  	<wsdl:part name="parameters" element="tns:AccountResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeactivateAccountRequest">
+  	<wsdl:part name="parameters" element="tns:DeactivateAccount"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeactivateAccountResponse">
+  	<wsdl:part name="parameters" element="tns:DeactivateAccountResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsRequest">
+  	<wsdl:part name="parameters" element="xsd1:GetAccountDetailsReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsResponse">
+  	<wsdl:part name="parameters" element="xsd1:GetAccountDetailsResp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountRequest">
+  	<wsdl:part name="parameters" element="xsd1:UpdateAccountReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountResponse">
+  	<wsdl:part name="parameters" element="xsd1:UpdateAccountResp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeactiveAccountRequest">
+  	<wsdl:part name="parameters" element="xsd1:DeactiveAccountReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeactiveAccountResponse">
+  	<wsdl:part name="parameters" element="xsd1:DeactiveAccountResp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Accounts">
+    <wsdl:operation name="CreateAccount">
+      <wsdl:input message="tns:CreateAccountRequest"/>
+      <wsdl:output message="tns:CreateAccountResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+    	<wsdl:input message="tns:GetAccountDetailsRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetAccountDetailsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+    	<wsdl:input message="tns:UpdateAccountRequest"></wsdl:input>
+    	<wsdl:output message="tns:UpdateAccountResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactiveAccount">
+    	<wsdl:input message="tns:DeactiveAccountRequest"></wsdl:input>
+    	<wsdl:output message="tns:DeactiveAccountResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountsSOAP" type="tns:Accounts">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CreateAccount">
+      <soap:operation soapAction="http://www.tibco.com/Accounts/CreateAccount"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Accounts">
+    <wsdl:port binding="tns:AccountsSOAP" name="AccountsSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

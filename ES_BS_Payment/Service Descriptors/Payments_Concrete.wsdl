@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:tns="http://www.tibco.com/Payments/Concrete" xmlns:tns0="http://www.example.org/Payments" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Payments_Concrete" targetNamespace="http://www.tibco.com/Payments/Concrete" tibex:src="file:/C:/Trainingbw6_project/E-commerce_wsdl/Payments_Concrete.wsdl">
+    
+  <wsdl:types>
+        
+    <xsd:schema xmlns:tns="http://www.example.org/Payments" elementFormDefault="qualified" targetNamespace="http://www.example.org/Payments">
+            
+      <xsd:complexType name="PaymentReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="ProductId" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="0" name="TransactionId" type="xsd:string"/>
+                    
+          <xsd:element name="AccountHolderName" type="xsd:string"/>
+                    
+          <xsd:element name="AccountNumber" type="xsd:string"/>
+                    
+          <xsd:element name="ConfirmAccountNumber" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="0" name="Ifsc_Code" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="0" name="Branch" type="xsd:string"/>
+                    
+          <xsd:element name="Balance" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="0" name="Phonenumber" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="0" name="Address" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="PaymentRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="Status" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="PaymentReq" type="tns:PaymentReqType"/>
+            
+      <xsd:element name="PaymentResp" type="tns:PaymentRespType"/>
+          
+    </xsd:schema>
+      
+  </wsdl:types>
+    
+  <wsdl:message name="MakePaymentRequest">
+        
+    <wsdl:part element="tns0:PaymentReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="MakePaymentResponse">
+        
+    <wsdl:part element="tns0:PaymentResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:portType name="Payments">
+        
+    <wsdl:operation name="MakePayment">
+            
+      <wsdl:input message="tns:MakePaymentRequest"/>
+            
+      <wsdl:output message="tns:MakePaymentResponse"/>
+          
+    </wsdl:operation>
+      
+  </wsdl:portType>
+    
+  <wsdl:binding name="SOAPServiceBinding" type="tns:Payments">
+        
+    <soap:binding style="document" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+        
+    <jms:binding messageFormat="text"/>
+        
+    <wsdl:operation name="MakePayment">
+            
+      <soap:operation soapAction="MakePayment" style="document"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+      
+  </wsdl:binding>
+    
+  <wsdl:service name="Payments_Concrete">
+        
+    <wsdl:port binding="tns:SOAPServiceBinding" name="Payments_ConcreteSOAP">
+            
+      <soap:address location=""/>
+            
+      <jms:connectionFactory/>
+            
+      <jms:targetAddress destination="queue">Ecommerce.Paymentmodule.queue</jms:targetAddress>
+          
+    </wsdl:port>
+      
+  </wsdl:service>
+  
+</wsdl:definitions>

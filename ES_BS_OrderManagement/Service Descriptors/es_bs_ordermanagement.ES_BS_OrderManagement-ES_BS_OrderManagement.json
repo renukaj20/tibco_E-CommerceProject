@@ -1,0 +1,394 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ES_BS_OrderManagement",
+    "description" : "ES_BS_OrderManagement service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/CancelOrder" : {
+      "post" : {
+        "summary" : "postES_BS_OrderManagement",
+        "description" : "postES_BS_OrderManagement",
+        "operationId" : "post-CancelOrder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CancelOrderReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CancelOrderResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CancelOrderResp"
+            }
+          }
+        }
+      }
+    },
+    "/GetOrderHistory" : {
+      "post" : {
+        "summary" : "postES_BS_OrderManagement",
+        "description" : "postES_BS_OrderManagement",
+        "operationId" : "post-GetOrderHistory",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/GetorderHistoryReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a getorderHistoryResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/getorderHistoryResp"
+            }
+          }
+        }
+      }
+    },
+    "/CreateOrder" : {
+      "post" : {
+        "summary" : "postES_BS_OrderManagement",
+        "description" : "postES_BS_OrderManagement",
+        "operationId" : "post-CreateOrder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/createOrderReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a createOrderResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/createOrderResp"
+            }
+          }
+        }
+      }
+    },
+    "/GetOrder" : {
+      "post" : {
+        "summary" : "postES_BS_OrderManagement",
+        "description" : "postES_BS_OrderManagement",
+        "operationId" : "post-GetOrder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/GetorderReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetorderResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetorderResp"
+            }
+          }
+        }
+      }
+    },
+    "/Updateorder" : {
+      "post" : {
+        "summary" : "postES_BS_OrderManagement",
+        "description" : "postES_BS_OrderManagement",
+        "operationId" : "post-Updateorder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/UpdateorderReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a UpdateorderResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateorderResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "GetorderHistoryReq" : {
+      "type" : "object",
+      "required" : [ "EndRecord", "StartRecord" ],
+      "properties" : {
+        "StartRecord" : {
+          "type" : "string"
+        },
+        "EndRecord" : {
+          "type" : "string"
+        }
+      }
+    },
+    "getorderHistoryResp" : {
+      "type" : "object",
+      "properties" : {
+        "Order" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Order",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "Order" : {
+      "type" : "object",
+      "required" : [ "LIST_PRICE", "REQUIRED_DATE", "ORDER_ID", "ORDER_DATE", "SHIPPED_DATE", "QUANTITY", "CUSTOMER_ID", "ResponseMsg", "ORDER_STATUS", "PRODUCT_ID", "DISCOUNT" ],
+      "properties" : {
+        "ORDER_ID" : {
+          "type" : "string"
+        },
+        "CUSTOMER_ID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "QUANTITY" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        },
+        "DISCOUNT" : {
+          "type" : "string"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        },
+        "ORDER_DATE" : {
+          "type" : "string"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string"
+        },
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "createOrderResp" : {
+      "type" : "object",
+      "required" : [ "LIST_PRICE", "REQUIRED_DATE", "ORDER_ID", "ORDER_DATE", "SHIPPED_DATE", "QUANTITY", "CUSTOMER_ID", "ResponseMsg", "ORDER_STATUS", "PRODUCT_ID", "DISCOUNT" ],
+      "properties" : {
+        "ORDER_ID" : {
+          "type" : "string"
+        },
+        "CUSTOMER_ID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "QUANTITY" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        },
+        "DISCOUNT" : {
+          "type" : "string"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        },
+        "ORDER_DATE" : {
+          "type" : "string"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string"
+        },
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "UpdateorderReq" : {
+      "type" : "object",
+      "required" : [ "LIST_PRICE", "REQUIRED_DATE", "ORDER_ID", "ORDER_DATE", "SHIPPED_DATE", "QUANTITY", "CUSTOMER_ID", "ORDER_STATUS", "PRODUCT_ID", "DISCOUNT" ],
+      "properties" : {
+        "ORDER_ID" : {
+          "type" : "string"
+        },
+        "CUSTOMER_ID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "QUANTITY" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        },
+        "DISCOUNT" : {
+          "type" : "string"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        },
+        "ORDER_DATE" : {
+          "type" : "string"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CancelOrderResp" : {
+      "type" : "object",
+      "required" : [ "ResponseMsg" ],
+      "properties" : {
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "createOrderReq" : {
+      "type" : "object",
+      "required" : [ "LIST_PRICE", "REQUIRED_DATE", "ORDER_ID", "ORDER_DATE", "SHIPPED_DATE", "QUANTITY", "CUSTOMER_ID", "ORDER_STATUS", "PRODUCT_ID", "DISCOUNT" ],
+      "properties" : {
+        "ORDER_ID" : {
+          "type" : "string"
+        },
+        "CUSTOMER_ID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "QUANTITY" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        },
+        "DISCOUNT" : {
+          "type" : "string"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        },
+        "ORDER_DATE" : {
+          "type" : "string"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetorderResp" : {
+      "type" : "object",
+      "required" : [ "LIST_PRICE", "REQUIRED_DATE", "ORDER_ID", "ORDER_DATE", "SHIPPED_DATE", "QUANTITY", "CUSTOMER_ID", "ResponseMsg", "ORDER_STATUS", "PRODUCT_ID", "DISCOUNT" ],
+      "properties" : {
+        "ORDER_ID" : {
+          "type" : "string"
+        },
+        "CUSTOMER_ID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "QUANTITY" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        },
+        "DISCOUNT" : {
+          "type" : "string"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        },
+        "ORDER_DATE" : {
+          "type" : "string"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string"
+        },
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "UpdateorderResp" : {
+      "type" : "object",
+      "required" : [ "ResponseMsg" ],
+      "properties" : {
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CancelOrderReq" : {
+      "type" : "object",
+      "required" : [ "ORDER_ID" ],
+      "properties" : {
+        "ORDER_ID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetorderReq" : {
+      "type" : "object",
+      "required" : [ "ORDER_ID" ],
+      "properties" : {
+        "ORDER_ID" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

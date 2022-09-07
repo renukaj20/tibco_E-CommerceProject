@@ -1,0 +1,65 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "LogoutProcess_sessionHandler",
+    "description" : "LogoutProcess_sessionHandler service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/logoutprocess_sessionhandler" : {
+      "post" : {
+        "summary" : "postLogoutProcess_sessionHandler",
+        "description" : "postLogoutProcess_sessionHandler",
+        "operationId" : "post-logoutprocess_sessionhandler",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/LogoutReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a LogoutResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/LogoutResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "LogoutReq" : {
+      "type" : "object",
+      "required" : [ "UserId", "SessionId" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        },
+        "SessionId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "LogoutResp" : {
+      "type" : "object",
+      "required" : [ "Userid", "ResponseMessage" ],
+      "properties" : {
+        "Userid" : {
+          "type" : "string"
+        },
+        "ResponseMessage" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

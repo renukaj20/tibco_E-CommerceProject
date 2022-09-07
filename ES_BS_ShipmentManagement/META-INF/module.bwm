@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_7YhFIPXWEeyA299WiLQVBg" targetNamespace="http://tns.tibco.com/bw/composite/ES_BS_ShipmentManagement" name="ES_BS_ShipmentManagement" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_HhGnkvXXEeyA299WiLQVBg" name="updateshipment" promote="ComponentUpdateShipment/updateshipment">
+    <sca:interface.wsdl xmi:id="_HhGnlvXXEeyA299WiLQVBg" interface="http://xmlns.example.com/20220627103800PLT#wsdl.interface(updateshipment)" scaext:wsdlLocation="../Processes/es_bs_shipmentmanagement/UpdateShipment.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_HhjTgPXXEeyA299WiLQVBg" name="RestService" path="/updateshipment" docBasePath="http://localhost:7777/ES_BS_ShipmentManagement" docResourcePath="UpdateShipment" basePath="/" connector="es_common_model.HTTPConnection" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_shipmentmanagement.UpdateShipment-UpdateShipment.json">
+      <operation xmi:id="_Hh__cPXXEeyA299WiLQVBg" operationName="post" nickname="post-updateshipment" httpMethod="POST" notes="postUpdateShipment" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_HivmUPXXEeyA299WiLQVBg"/>
+      <advancedConfig xmi:id="_HhjTgfXXEeyA299WiLQVBg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_Hh__cfXXEeyA299WiLQVBg" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_8FdqsPXWEeyA299WiLQVBg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8F9Z8PXWEeyA299WiLQVBg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8GGj4PXWEeyA299WiLQVBg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8GZe0PXWEeyA299WiLQVBg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8GsZwPXWEeyA299WiLQVBg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8G2KwPXWEeyA299WiLQVBg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8HJFsPXWEeyA299WiLQVBg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8HcAoPXWEeyA299WiLQVBg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8HlxoPXWEeyA299WiLQVBg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_Hg82kPXXEeyA299WiLQVBg" name="ComponentUpdateShipment" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Hg82kfXXEeyA299WiLQVBg" processName="es_bs_shipmentmanagement.UpdateShipment"/>
+    <sca:service xmi:id="_HhGnkPXXEeyA299WiLQVBg" name="updateshipment">
+      <sca:interface.wsdl xmi:id="_HhGnkfXXEeyA299WiLQVBg" interface="http://xmlns.example.com/20220627103800PLT#wsdl.interface(updateshipment)" scaext:wsdlLocation="../Processes/es_bs_shipmentmanagement/UpdateShipment.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_4HhDcNGwEeyZQYcjFSCfHQ" targetNamespace="http://tns.tibco.com/bw/composite/ES_BS_UserOnBoarding" name="ES_BS_UserOnBoarding" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_Xtl8otKeEeyqV6OuvJH1Lw" name="createaccount" promote="ComponentCreateAccount/createaccount">
+    <sca:interface.wsdl xmi:id="_XtmjsdKeEeyqV6OuvJH1Lw" interface="http://xmlns.example.com/20220513145337PLT#wsdl.interface(createaccount)" scaext:wsdlLocation="../Processes/es_bs_useronboarding/CreateAccount.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_Xt43kNKeEeyqV6OuvJH1Lw" name="RestService" path="/createaccount" docBasePath="http://localhost:7777/ES_BS_UserOnBoarding" docResourcePath="CreateAccount" basePath="/" connector="es_common_model.HTTPConnection" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_useronboarding.CreateAccount-CreateAccount.json">
+      <operation xmi:id="_XuHhENKeEeyqV6OuvJH1Lw" operationName="post" nickname="post-createaccount" httpMethod="POST" notes="postCreateAccount" responseStyle="element" requestStyle="element" outputPartName="createResp">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_XuTuUNKeEeyqV6OuvJH1Lw"/>
+      <advancedConfig xmi:id="_Xt43kdKeEeyqV6OuvJH1Lw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_XuHhEdKeEeyqV6OuvJH1Lw" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_VspGotKgEeyqV6OuvJH1Lw" name="getAccountDetails" promote="ComponentCreateAccount/getAccountDetails">
+    <sca:interface.wsdl xmi:id="_VsptsNKgEeyqV6OuvJH1Lw" interface="http://xmlns.example.com/20220513145337PLT#wsdl.interface(getAccountDetails)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_VtIO0NKgEeyqV6OuvJH1Lw" name="RestService1" path="/getAccountDetails" docBasePath="http://localhost:7777/ES_BS_UserOnBoarding" docResourcePath="CreateAccount" basePath="/" connector="es_common_model.HTTPConnection" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_useronboarding.CreateAccount-CreateAccount.json">
+      <operation xmi:id="_VtW4UNKgEeyqV6OuvJH1Lw" operationName="post" nickname="post-getAccountDetails" httpMethod="POST" notes="postGetAccountDetails" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_Vtwg8NKgEeyqV6OuvJH1Lw"/>
+      <advancedConfig xmi:id="_VtIO0dKgEeyqV6OuvJH1Lw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_VtW4UdKgEeyqV6OuvJH1Lw" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_1MtJMtKiEeyqV6OuvJH1Lw" name="Updateaccount" promote="ComponentCreateAccount/Updateaccount">
+    <sca:interface.wsdl xmi:id="_1MtJNtKiEeyqV6OuvJH1Lw" interface="http://xmlns.example.com/20220513145337PLT#wsdl.interface(Updateaccount)" scaext:wsdlLocation="../Processes/es_bs_useronboarding/Account_UseronBoarding.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_1NOtoNKiEeyqV6OuvJH1Lw" name="RestService2" path="/Updateaccount" docBasePath="http://localhost:7777/ES_BS_UserOnBoarding" docResourcePath="CreateAccount" basePath="/" connector="es_common_model.HTTPConnection" structuredData="true" technologyVersion="2.0">
+      <operation xmi:id="_1NcJANKiEeyqV6OuvJH1Lw" operationName="post" nickname="post-Updateaccount" httpMethod="POST" notes="postCreateAccount" responseStyle="element" requestStyle="element" outputPartName="UpdateResp">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_1OXWENKiEeyqV6OuvJH1Lw"/>
+      <advancedConfig xmi:id="_1NOtodKiEeyqV6OuvJH1Lw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_1NcJAdKiEeyqV6OuvJH1Lw" bindingName="RestService2"/>
+  </sca:service>
+  <sca:service xmi:id="_pjpl8dKjEeyqV6OuvJH1Lw" name="DeactiveAccount" promote="ComponentCreateAccount/DeactiveAccount">
+    <sca:interface.wsdl xmi:id="_pjpl9dKjEeyqV6OuvJH1Lw" interface="http://xmlns.example.com/20220513145337PLT#wsdl.interface(DeactiveAccount)" scaext:wsdlLocation="../Processes/es_bs_useronboarding/Account_UseronBoarding.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_pkbCANKjEeyqV6OuvJH1Lw" name="RestService3" path="/DeactiveAccount" docBasePath="http://localhost:7777/ES_BS_UserOnBoarding" docResourcePath="CreateAccount" basePath="/" connector="es_common_model.HTTPConnection" structuredData="true" technologyVersion="2.0">
+      <operation xmi:id="_pkq5oNKjEeyqV6OuvJH1Lw" operationName="post" nickname="post-DeactiveAccount" httpMethod="POST" notes="postCreateAccount" responseStyle="element" requestStyle="element" outputPartName="DeleteResp">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_plQvgNKjEeyqV6OuvJH1Lw"/>
+      <advancedConfig xmi:id="_pkbCAdKjEeyqV6OuvJH1Lw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_pkq5odKjEeyqV6OuvJH1Lw" bindingName="RestService3"/>
+  </sca:service>
+  <sca:property xmi:id="_57lCENGwEeyZQYcjFSCfHQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5705sNGwEeyZQYcjFSCfHQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_577nYNGwEeyZQYcjFSCfHQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_58ExUNGwEeyZQYcjFSCfHQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_58OiUNGwEeyZQYcjFSCfHQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_58UB4NGwEeyZQYcjFSCfHQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_58ckwNGwEeyZQYcjFSCfHQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_58mVwNGwEeyZQYcjFSCfHQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_58uRkNGwEeyZQYcjFSCfHQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_XtlVkNKeEeyqV6OuvJH1Lw" name="ComponentCreateAccount" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_XtlVkdKeEeyqV6OuvJH1Lw" processName="es_bs_useronboarding.Account_UseronBoarding"/>
+    <sca:service xmi:id="_Xtl8oNKeEeyqV6OuvJH1Lw" name="createaccount">
+      <sca:interface.wsdl xmi:id="_Xtl8odKeEeyqV6OuvJH1Lw" interface="http://xmlns.example.com/20220513145337PLT#wsdl.interface(createaccount)" scaext:wsdlLocation="../Processes/es_bs_useronboarding/CreateAccount.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_VspGoNKgEeyqV6OuvJH1Lw" name="getAccountDetails">
+      <sca:interface.wsdl xmi:id="_VspGodKgEeyqV6OuvJH1Lw" interface="http://xmlns.example.com/20220513145337PLT#wsdl.interface(getAccountDetails)"/>
+    </sca:service>
+    <sca:service xmi:id="_1MtJMNKiEeyqV6OuvJH1Lw" name="Updateaccount">
+      <sca:interface.wsdl xmi:id="_1MtJMdKiEeyqV6OuvJH1Lw" interface="http://xmlns.example.com/20220513145337PLT#wsdl.interface(Updateaccount)"/>
+    </sca:service>
+    <sca:service xmi:id="_pjo-4NKjEeyqV6OuvJH1Lw" name="DeactiveAccount">
+      <sca:interface.wsdl xmi:id="_pjpl8NKjEeyqV6OuvJH1Lw" interface="http://xmlns.example.com/20220513145337PLT#wsdl.interface(DeactiveAccount)" scaext:wsdlLocation="../Processes/es_bs_useronboarding/Account_UseronBoarding.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:tns="http://www.tibco.com/Orders/concrete" xmlns:tns0="http://www.eniquesolutions.com/ES_BS_OrderManagement" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Orders" targetNamespace="http://www.tibco.com/Orders/concrete" tibex:src="file:/C:/trainingbw6/E-commerce_wsdl/Orders_gen1.wsdl">
+    
+  <wsdl:types>
+        
+    <xsd:schema xmlns:Q1="http://www.eniquesolutions.com/Es_ProductManagement" xmlns:pref="http://www.eniquesolutions/ES_SessionHander" xmlns:tns="http://www.eniquesolutions.com/ES_BS_OrderManagement" elementFormDefault="qualified" targetNamespace="http://www.eniquesolutions.com/ES_BS_OrderManagement">
+            
+      <xsd:complexType name="createOrderReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="ORDER_ID" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="CUSTOMER_ID" type="xsd:string"/>
+                    
+          <xsd:element name="PRODUCT_ID" type="xsd:string"/>
+                    
+          <xsd:element name="QUANTITY" type="xsd:string"/>
+                    
+          <xsd:element name="LIST_PRICE" type="xsd:string"/>
+                    
+          <xsd:element name="DISCOUNT" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_STATUS" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="REQUIRED_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="SHIPPED_DATE" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="createOrderRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="ORDER_ID" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="CUSTOMER_ID" type="xsd:string"/>
+                    
+          <xsd:element name="PRODUCT_ID" type="xsd:string"/>
+                    
+          <xsd:element name="QUANTITY" type="xsd:string"/>
+                    
+          <xsd:element name="LIST_PRICE" type="xsd:string"/>
+                    
+          <xsd:element name="DISCOUNT" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_STATUS" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="REQUIRED_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="SHIPPED_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="ResponseMsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="createOrderReq" type="tns:createOrderReqType"/>
+            
+      <xsd:element name="createOrderResp" type="tns:createOrderRespType"/>
+            
+      <xsd:complexType name="GetorderReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="ORDER_ID" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="GetOrderRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="ORDER_ID" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="CUSTOMER_ID" type="xsd:string"/>
+                    
+          <xsd:element name="PRODUCT_ID" type="xsd:string"/>
+                    
+          <xsd:element name="QUANTITY" type="xsd:string"/>
+                    
+          <xsd:element name="LIST_PRICE" type="xsd:string"/>
+                    
+          <xsd:element name="DISCOUNT" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_STATUS" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="REQUIRED_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="SHIPPED_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="ResponseMsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="UpdateorderReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="ORDER_ID" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="CUSTOMER_ID" type="xsd:string"/>
+                    
+          <xsd:element name="PRODUCT_ID" type="xsd:string"/>
+                    
+          <xsd:element name="QUANTITY" type="xsd:string"/>
+                    
+          <xsd:element name="LIST_PRICE" type="xsd:string"/>
+                    
+          <xsd:element name="DISCOUNT" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_STATUS" type="xsd:string"/>
+                    
+          <xsd:element name="ORDER_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="REQUIRED_DATE" type="xsd:string"/>
+                    
+          <xsd:element name="SHIPPED_DATE" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="UpdateorderRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="ResponseMsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="GetorderReq" type="tns:GetorderReqType"/>
+            
+      <xsd:element name="GetorderResp" type="tns:GetOrderRespType"/>
+            
+      <xsd:element name="UpdateorderReq" type="tns:UpdateorderReqType"/>
+            
+      <xsd:element name="UpdateorderResp" type="tns:UpdateorderRespType"/>
+            
+      <xsd:complexType name="CancelOrderReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="ORDER_ID" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="CancelorderRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="ResponseMsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="CancelOrderReq" type="tns:CancelOrderReqType"/>
+            
+      <xsd:element name="CancelOrderResp" type="tns:CancelorderRespType"/>
+            
+      <xsd:complexType name="CancelOrderReqArray">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="CancelOrderReq" type="tns:CancelOrderReqType"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="CancelOrderReqArray" type="tns:CancelOrderReqArray"/>
+            
+      <xsd:complexType name="GetorderHistoryReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="StartRecord" type="xsd:string"/>
+                    
+          <xsd:element name="EndRecord" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="GetorderHistoryRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Order" type="tns:GetOrderRespType"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="GetorderHistoryReq" type="tns:GetorderHistoryReqType"/>
+            
+      <xsd:element name="getorderHistoryResp" type="tns:GetorderHistoryRespType"/>
+          
+    </xsd:schema>
+      
+  </wsdl:types>
+    
+  <wsdl:message name="CreateOrderRequest">
+        
+    <wsdl:part element="tns0:createOrderReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="CreateOrderResponse">
+        
+    <wsdl:part element="tns0:createOrderResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="GetOrderRequest">
+        
+    <wsdl:part element="tns0:GetorderReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="GetOrderResponse">
+        
+    <wsdl:part element="tns0:GetorderResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="UpdateOrderRequest">
+        
+    <wsdl:part element="tns0:UpdateorderReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="UpdateOrderResponse">
+        
+    <wsdl:part element="tns0:UpdateorderResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="CancelOrderRequest">
+        
+    <wsdl:part element="tns0:CancelOrderReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="CancelOrderResponse">
+        
+    <wsdl:part element="tns0:CancelOrderResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="GetOrderHistoryRequest">
+        
+    <wsdl:part element="tns0:GetorderHistoryReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="GetOrderHistoryResponse">
+        
+    <wsdl:part element="tns0:getorderHistoryResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:portType name="Orders">
+        
+    <wsdl:operation name="CreateOrder">
+            
+      <wsdl:input message="tns:CreateOrderRequest"/>
+            
+      <wsdl:output message="tns:CreateOrderResponse"/>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="GetOrder">
+            
+      <wsdl:input message="tns:GetOrderRequest"/>
+            
+      <wsdl:output message="tns:GetOrderResponse"/>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="UpdateOrder">
+            
+      <wsdl:input message="tns:UpdateOrderRequest"/>
+            
+      <wsdl:output message="tns:UpdateOrderResponse"/>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="CancelOrder">
+            
+      <wsdl:input message="tns:CancelOrderRequest"/>
+            
+      <wsdl:output message="tns:CancelOrderResponse"/>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="GetOrderHistory">
+            
+      <wsdl:input message="tns:GetOrderHistoryRequest"/>
+            
+      <wsdl:output message="tns:GetOrderHistoryResponse"/>
+          
+    </wsdl:operation>
+      
+  </wsdl:portType>
+    
+  <wsdl:binding name="SOAPServiceBinding" type="tns:Orders">
+        
+    <soap:binding style="document" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+        
+    <jms:binding messageFormat="bytes"/>
+        
+    <wsdl:operation name="CreateOrder">
+            
+      <soap:operation soapAction="CreateOrder" style="document"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="GetOrder">
+            
+      <soap:operation soapAction="GetOrder" style="document"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="UpdateOrder">
+            
+      <soap:operation soapAction="UpdateOrder" style="document"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="CancelOrder">
+            
+      <soap:operation soapAction="CancelOrder" style="document"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="GetOrderHistory">
+            
+      <soap:operation soapAction="GetOrderHistory" style="document"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+      
+  </wsdl:binding>
+    
+  <wsdl:service name="Orders">
+        
+    <wsdl:port binding="tns:SOAPServiceBinding" name="OrdersSOAP">
+            
+      <soap:address location=""/>
+            
+      <jms:connectionFactory/>
+            
+      <jms:targetAddress destination="queue">ordermanagement.queue</jms:targetAddress>
+          
+    </wsdl:port>
+      
+  </wsdl:service>
+  
+</wsdl:definitions>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.EniqueSolutions.com/Abstarct/V1/Products" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Products" targetNamespace="http://www.EniqueSolutions.com/Abstarct/V1/Products" xmlns:xsd1="http://www.eniquesolutions.com/Es_ProductManagement">
+  <wsdl:types>
+
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import
+    		namespace="http://www.eniquesolutions.com/Es_ProductManagement"
+    		schemaLocation="../Schemas/ES_productmanagement.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="AddProductsRequest">
+    <wsdl:part element="xsd1:AddproductReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="AddProductsResponse">
+    <wsdl:part element="xsd1:AddproductResp" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="updateProductsRequest">
+  	<wsdl:part name="parameters" element="xsd1:UpdateproductReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateProductsResponse">
+  	<wsdl:part name="parameters" element="xsd1:UpdateproductResp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetIndividualProductRequest">
+  	<wsdl:part name="parameters" element="xsd1:GetIndividualproductReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetIndividualProductResponse">
+  	<wsdl:part name="parameters" element="xsd1:GetIndividualProductResp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetProdByCategoryRequest">
+  	<wsdl:part name="parameters" element="xsd1:GetproductByCategoriesReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetProdByCategoryResponse">
+  	<wsdl:part name="parameters" element="xsd1:GetproductByCategoriesResp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAllProductsRequest">
+  	<wsdl:part name="parameters" element="xsd1:GetAllProductReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAllProductsResponse">
+  	<wsdl:part name="parameters" element="xsd1:GetAllproductResp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeleteProductRequest">
+  	<wsdl:part name="parameters" element="xsd1:DeleteproductReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeleteProductResponse">
+  	<wsdl:part name="parameters" element="xsd1:DeleteproductResp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Products">
+    <wsdl:operation name="AddProducts">
+      <wsdl:input message="tns:AddProductsRequest"/>
+      <wsdl:output message="tns:AddProductsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateProducts">
+    	<wsdl:input message="tns:updateProductsRequest"></wsdl:input>
+    	<wsdl:output message="tns:updateProductsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualProduct">
+    	<wsdl:input message="tns:GetIndividualProductRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetIndividualProductResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdByCategory">
+    	<wsdl:input message="tns:GetProdByCategoryRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetProdByCategoryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+    	<wsdl:input message="tns:GetAllProductsRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetAllProductsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+    	<wsdl:input message="tns:DeleteProductRequest"></wsdl:input>
+    	<wsdl:output message="tns:DeleteProductResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProductsSOAP" type="tns:Products">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AddProducts">
+      <soap:operation soapAction="http://www.EniqueSolutions.com/Abstarct/V1/Products/NewOperation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Products">
+    <wsdl:port binding="tns:ProductsSOAP" name="ProductsSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

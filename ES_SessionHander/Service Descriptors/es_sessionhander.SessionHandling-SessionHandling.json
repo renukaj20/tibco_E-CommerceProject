@@ -1,0 +1,68 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "SessionHandling",
+    "description" : "SessionHandling service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/login" : {
+      "post" : {
+        "summary" : "postSessionHandling",
+        "description" : "postSessionHandling",
+        "operationId" : "post-login",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/LoginReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a LoginResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/LoginResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "LoginReq" : {
+      "type" : "object",
+      "required" : [ "Username", "Password" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        }
+      }
+    },
+    "LoginResp" : {
+      "type" : "object",
+      "required" : [ "Username", "ResponseMsg", "SessioniD" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "SessioniD" : {
+          "type" : "string"
+        },
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

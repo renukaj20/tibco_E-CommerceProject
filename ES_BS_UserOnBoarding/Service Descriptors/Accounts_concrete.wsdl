@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:tns="http://www.tibco.com/Accounts/concrete" xmlns:tns0="http://www.eniquesolutions/ES_SessionHander" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Accounts_-concrete" targetNamespace="http://www.tibco.com/Accounts/concrete" tibex:src="file:/C:/Trainingbw6_project/E-commerce_wsdl/Accounts_concrete.wsdl">
+    
+  <wsdl:types>
+        
+    <xsd:schema xmlns:tns="http://www.eniquesolutions/ES_SessionHander" elementFormDefault="qualified" targetNamespace="http://www.eniquesolutions/ES_SessionHander">
+            
+      <xsd:complexType name="LoginReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="UserId" type="xsd:string"/>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="Password" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="LogoutReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="SessionId" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="LogoutReq" type="tns:LogoutReqType"/>
+            
+      <xsd:complexType name="CreateSessionReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="Username" type="xsd:string"/>
+                    
+          <xsd:element name="password" type="xsd:string"/>
+                    
+          <xsd:element name="Timestamp" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="CreateReq" type="tns:CreateSessionReqType"/>
+            
+      <xsd:complexType name="CreateSessionRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="Username" type="xsd:string"/>
+                    
+          <xsd:element name="RespTimestamp" type="xsd:string"/>
+                    
+          <xsd:element name="SessionId" type="xsd:string"/>
+                    
+          <xsd:element name="Password" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="CreateResp" type="tns:CreateSessionRespType"/>
+            
+      <xsd:complexType name="LoginRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element maxOccurs="1" minOccurs="1" name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="SessioniD" type="xsd:string"/>
+                    
+          <xsd:element name="ResponseMsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="LoginResp" type="tns:LoginRespType"/>
+            
+      <xsd:element name="LoginReq" type="tns:LoginReqType"/>
+            
+      <xsd:complexType name="LogoutRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="Userid" type="xsd:string"/>
+                    
+          <xsd:element name="ResponseMessage" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="LogoutResp" type="tns:LogoutRespType"/>
+            
+      <xsd:complexType name="ValidatesessionReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="SessionId" type="xsd:string"/>
+                    
+          <xsd:element name="TransactionId" type="xsd:string"/>
+                    
+          <xsd:element name="ReqTimeStamp" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="ValidatesessionReq" type="tns:ValidatesessionReqType"/>
+            
+      <xsd:complexType name="ValidatesessionRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="SessionId" type="xsd:string"/>
+                    
+          <xsd:element name="Responsemsg" type="xsd:string"/>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="TransactionId" type="xsd:string"/>
+                    
+          <xsd:element name="RespTimestamp" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="ValidatesessionResp" type="tns:ValidatesessionRespType"/>
+            
+      <xsd:complexType name="CreateAccountReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="Firstname" type="xsd:string"/>
+                    
+          <xsd:element name="Lastname" type="xsd:string"/>
+                    
+          <xsd:element name="Email" type="xsd:string"/>
+                    
+          <xsd:element name="Password" type="xsd:string"/>
+                    
+          <xsd:element name="ConfrimPassword" type="xsd:string"/>
+                    
+          <xsd:element name="Phonenumber" type="xsd:string"/>
+                    
+          <xsd:element name="Address" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="CreateAccountReq" type="tns:CreateAccountReqType"/>
+            
+      <xsd:complexType name="CreateAccountRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="Firstname" type="xsd:string"/>
+                    
+          <xsd:element name="Lastname" type="xsd:string"/>
+                    
+          <xsd:element name="Email" type="xsd:string"/>
+                    
+          <xsd:element name="Password" type="xsd:string"/>
+                    
+          <xsd:element name="ConfirmPassword" type="xsd:string"/>
+                    
+          <xsd:element name="Phonenumber" type="xsd:string"/>
+                    
+          <xsd:element name="Address" type="xsd:string"/>
+                    
+          <xsd:element name="Responsemsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="CreateAccountResp" type="tns:CreateAccountRespType"/>
+            
+      <xsd:complexType name="GetAccountDetailsReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="GetAccountDetailsReq" type="tns:GetAccountDetailsReqType"/>
+            
+      <xsd:complexType name="GetAccountDetailsRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="Firstname" type="xsd:string"/>
+                    
+          <xsd:element name="Lastname" type="xsd:string"/>
+                    
+          <xsd:element name="Email" type="xsd:string"/>
+                    
+          <xsd:element name="Phonenumber" type="xsd:string"/>
+                    
+          <xsd:element name="Address" type="xsd:string"/>
+                    
+          <xsd:element name="Responsemsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="GetAccountDetailsResp" type="tns:GetAccountDetailsRespType"/>
+            
+      <xsd:complexType name="UpdateAccountReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="Firstname" type="xsd:string"/>
+                    
+          <xsd:element name="Lastname" type="xsd:string"/>
+                    
+          <xsd:element name="Email" type="xsd:string"/>
+                    
+          <xsd:element name="Password" type="xsd:string"/>
+                    
+          <xsd:element name="Phonenumber" type="xsd:string"/>
+                    
+          <xsd:element name="Address" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="UpdateAccountRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="ResponseMsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:complexType name="DeactiveAccountReqType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+            
+      <xsd:element name="DeactiveAccountReq" type="tns:DeactiveAccountReqType"/>
+            
+      <xsd:element name="UpdateAccountReq" type="tns:UpdateAccountReqType"/>
+            
+      <xsd:element name="UpdateAccountResp" type="tns:UpdateAccountRespType"/>
+            
+      <xsd:element name="DeactiveAccountResp" type="tns:DeactiveAccountRespType"/>
+            
+      <xsd:complexType name="DeactiveAccountRespType">
+                
+        <xsd:sequence>
+                    
+          <xsd:element name="UserId" type="xsd:string"/>
+                    
+          <xsd:element name="ResponseMsg" type="xsd:string"/>
+                  
+        </xsd:sequence>
+              
+      </xsd:complexType>
+          
+    </xsd:schema>
+      
+  </wsdl:types>
+    
+  <wsdl:message name="CreateAccountRequest">
+        
+    <wsdl:part element="tns0:CreateAccountReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="CreateAccountResponse">
+        
+    <wsdl:part element="tns0:CreateAccountResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="GetAccountDetailsRequest">
+        
+    <wsdl:part element="tns0:GetAccountDetailsReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="GetAccountDetailsResponse">
+        
+    <wsdl:part element="tns0:GetAccountDetailsResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="UpdateAccountRequest">
+        
+    <wsdl:part element="tns0:UpdateAccountReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="UpdateAccountResponse">
+        
+    <wsdl:part element="tns0:UpdateAccountResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="DeactiveAccountRequest">
+        
+    <wsdl:part element="tns0:DeactiveAccountReq" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="DeactiveAccountResponse">
+        
+    <wsdl:part element="tns0:DeactiveAccountResp" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:portType name="Accounts">
+        
+    <wsdl:operation name="CreateAccount">
+            
+      <wsdl:input message="tns:CreateAccountRequest"/>
+            
+      <wsdl:output message="tns:CreateAccountResponse"/>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="GetAccountDetails">
+            
+      <wsdl:input message="tns:GetAccountDetailsRequest"/>
+            
+      <wsdl:output message="tns:GetAccountDetailsResponse"/>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="UpdateAccount">
+            
+      <wsdl:input message="tns:UpdateAccountRequest"/>
+            
+      <wsdl:output message="tns:UpdateAccountResponse"/>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="DeactiveAccount">
+            
+      <wsdl:input message="tns:DeactiveAccountRequest"/>
+            
+      <wsdl:output message="tns:DeactiveAccountResponse"/>
+          
+    </wsdl:operation>
+      
+  </wsdl:portType>
+    
+  <wsdl:binding name="SOAPServiceBinding" type="tns:Accounts">
+        
+    <soap:binding style="rpc" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+        
+    <jms:binding messageFormat="text"/>
+        
+    <wsdl:operation name="CreateAccount">
+            
+      <soap:operation soapAction="CreateAccount" style="rpc"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="GetAccountDetails">
+            
+      <soap:operation soapAction="GetAccountDetails" style="rpc"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="UpdateAccount">
+            
+      <soap:operation soapAction="UpdateAccount" style="rpc"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="DeactiveAccount">
+            
+      <soap:operation soapAction="DeactiveAccount" style="rpc"/>
+            
+      <wsdl:input>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body parts="parameters" use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+      
+  </wsdl:binding>
+    
+  <wsdl:service name="Accounts_-concrete">
+        
+    <wsdl:port binding="tns:SOAPServiceBinding" name="Accounts_-concreteSOAP">
+            
+      <soap:address location=""/>
+            
+      <jms:connectionFactory/>
+            
+      <jms:targetAddress destination="queue">eniquesolutions.Es_Ts_useronboarding.modulequeue</jms:targetAddress>
+          
+    </wsdl:port>
+      
+  </wsdl:service>
+  
+</wsdl:definitions>

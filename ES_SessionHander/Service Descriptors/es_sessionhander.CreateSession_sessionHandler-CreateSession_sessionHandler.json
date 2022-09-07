@@ -1,0 +1,74 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "CreateSession_sessionHandler",
+    "description" : "CreateSession_sessionHandler service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/createsession_sessionhandler" : {
+      "post" : {
+        "summary" : "postCreateSession_sessionHandler",
+        "description" : "postCreateSession_sessionHandler",
+        "operationId" : "post-createsession_sessionhandler",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CreateReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CreateResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CreateResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CreateResp" : {
+      "type" : "object",
+      "required" : [ "RespTimestamp", "Username", "SessionId", "Password" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "RespTimestamp" : {
+          "type" : "string"
+        },
+        "SessionId" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateReq" : {
+      "type" : "object",
+      "required" : [ "password", "Username", "Timestamp" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "Timestamp" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.eniquesolutions.com/ES_Common_Framework" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolutions.com/ES_Common_Framework">
+    <complexType name="ExceptionHandlerType">
+    	<sequence>
+    		<element name="Process" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="MsgCode" type="string"></element>
+    		<element name="Msg" type="string"></element>
+    		<element name="TransactionId" type="string"></element>
+    		<element name="logtype" type="string"></element>
+    		<element name="Payload" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="ExceptionHandler" type="tns:ExceptionHandlerType"></element>
+    <complexType name="LogHandlerType">
+    	<sequence>
+    		<element name="LogMessage" type="string"></element>
+    		<element name="LogType" type="string"></element>
+    		<element name="Process" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Timestamp" type="string"></element>
+    		<element name="TransactionId" type="string"></element>
+    		<element name="CorrelationID" type="string"></element>
+    		<element name="Payload" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    	</sequence>
+    </complexType>
+    
+    <element name="LogHandler" type="tns:LogHandlerType"></element>
+
+    <complexType name="EmailHandlerType">
+    	<sequence>
+    		<element name="To" type="string"></element>
+    		<element name="CC" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="BCC" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Subject" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Body" type="string"></element>
+    		<element name="From" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="EmailHandler" type="tns:EmailHandlerType"></element>
+
+
+      
+    
+    
+    
+    
+  
+
+</schema>

@@ -1,0 +1,26 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/ES_BS_ProductManagement/Service Descriptors/es_bs_productmanagement.ProductManagement-ProductManagement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/ES_productmanagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions.com/Es_ProductManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_ProductManagement/Service Descriptors/es_bs_productmanagement.ProductManagement-ProductManagement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/ES_productmanagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions.com/Es_ProductManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_ProductManagement/Service Descriptors/es_bs_productmanagement.ProductManagement-ProductManagement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/ES_productmanagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions.com/Es_ProductManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_ProductManagement/Service Descriptors/es_bs_productmanagement.ProductManagement-ProductManagement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/ES_productmanagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolutions.com/Es_ProductManagement"
+    }
+]}

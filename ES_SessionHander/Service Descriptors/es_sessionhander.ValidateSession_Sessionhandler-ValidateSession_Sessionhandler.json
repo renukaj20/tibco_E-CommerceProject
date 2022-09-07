@@ -1,0 +1,80 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ValidateSession_Sessionhandler",
+    "description" : "ValidateSession_Sessionhandler service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/validatesession_sessionhandler" : {
+      "post" : {
+        "summary" : "postValidateSession_Sessionhandler",
+        "description" : "postValidateSession_Sessionhandler",
+        "operationId" : "post-validatesession_sessionhandler",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/ValidatesessionReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a ValidatesessionResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ValidatesessionResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ValidatesessionReq" : {
+      "type" : "object",
+      "required" : [ "Username", "ReqTimeStamp", "SessionId", "TransactionId" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "SessionId" : {
+          "type" : "string"
+        },
+        "TransactionId" : {
+          "type" : "string"
+        },
+        "ReqTimeStamp" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ValidatesessionResp" : {
+      "type" : "object",
+      "required" : [ "RespTimestamp", "Username", "Responsemsg", "SessionId", "TransactionId" ],
+      "properties" : {
+        "SessionId" : {
+          "type" : "string"
+        },
+        "Responsemsg" : {
+          "type" : "string"
+        },
+        "Username" : {
+          "type" : "string"
+        },
+        "TransactionId" : {
+          "type" : "string"
+        },
+        "RespTimestamp" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

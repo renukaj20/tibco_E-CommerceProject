@@ -1,0 +1,65 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/es_sessionhander.SessionHandling-SessionHandling.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.Session_Handling-Session_Handling.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.LoginProcess_Session_Handling-Session_Handling.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.LoginProcess_sessionHandler-LoginProcess_sessionHandler.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.LogoutProcess_sessionHandler-LogoutProcess_sessionHandler.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.CreateSession_sessionHandler-CreateSession_sessionHandler.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.ValidateSession_Sessionhandler-ValidateSession_Sessionhandler.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.loginprocess_sessonhandler-loginprocess_sessonhandler.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.Validatesesion-Validatesesion.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.loginprocess_sessonhandler-loginprocess_sessionhandler.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.ValidateSession-ValidateSession.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.Login_Process-Login_Process.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.Resource-Resource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.login-Resource.json",
+            "type": "generated"
+        }
+    ]
+}

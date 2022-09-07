@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Payments" xmlns:tns="http://www.example.org/Payments" elementFormDefault="qualified">
+
+    <complexType name="PaymentReqType">
+    	<sequence>
+    		<element name="ProductId" type="string"></element>
+    		<element name="TransactionId" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="AccountHolderName" type="string"></element>
+    		<element name="AccountNumber" type="string"></element>
+    		<element name="ConfirmAccountNumber" type="string"></element>
+    		<element name="Ifsc_Code" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Branch" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Balance" type="string"></element>
+    		<element name="Phonenumber" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Address" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="PaymentRespType">
+    	<sequence>
+    		<element name="Status" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="PaymentReq" type="tns:PaymentReqType"></element>
+
+    <element name="PaymentResp" type="tns:PaymentRespType"></element>
+</schema>

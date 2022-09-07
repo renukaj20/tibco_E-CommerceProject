@@ -1,0 +1,11 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [{
+        "location": "Service Descriptors/es_bs_ordermanagement.ES_BS_OrderManagement-ES_BS_OrderManagement.json",
+        "type": "generated"
+    }]
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_c3-UYAQCEe23dss8ICOJ_w" targetNamespace="http://tns.tibco.com/bw/composite/ES_BS_Payment" name="ES_BS_Payment" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_SwDd0AQxEe2XHOxUCjiG1g" name="makepayment" promote="ComponentMakePayment/makepayment">
+    <sca:interface.wsdl xmi:id="_SwHIMAQxEe2XHOxUCjiG1g" interface="http://xmlns.example.com/20220715165847PLT#wsdl.interface(makepayment)" scaext:wsdlLocation="../Processes/es_bs_payment/MakePayment.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_SwtlIAQxEe2XHOxUCjiG1g" name="RestService" path="/makepayment" docBasePath="http://localhost:7777/ES_BS_Payment" docResourcePath="MakePayment" basePath="/" connector="es_common_model.HTTPConnection" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_payment.MakePayment-MakePayment.json">
+      <operation xmi:id="_SxRl0AQxEe2XHOxUCjiG1g" operationName="post" nickname="post-makepayment" httpMethod="POST" notes="postMakePayment" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_SyLkwAQxEe2XHOxUCjiG1g"/>
+      <advancedConfig xmi:id="_SwtlIQQxEe2XHOxUCjiG1g" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_SxRl0QQxEe2XHOxUCjiG1g" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_dk8vIAQCEe23dss8ICOJ_w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dlGgIAQCEe23dss8ICOJ_w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dlQRIAQCEe23dss8ICOJ_w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dlQRIQQCEe23dss8ICOJ_w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dlZbEAQCEe23dss8ICOJ_w" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dlZbEQQCEe23dss8ICOJ_w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dljMEAQCEe23dss8ICOJ_w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dljMEQQCEe23dss8ICOJ_w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dlsWAAQCEe23dss8ICOJ_w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_Sv8wIAQxEe2XHOxUCjiG1g" name="ComponentMakePayment" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Sv8wIQQxEe2XHOxUCjiG1g" processName="es_bs_payment.MakePayment"/>
+    <sca:service xmi:id="_Sv_zcAQxEe2XHOxUCjiG1g" name="makepayment">
+      <sca:interface.wsdl xmi:id="_SwAagAQxEe2XHOxUCjiG1g" interface="http://xmlns.example.com/20220715165847PLT#wsdl.interface(makepayment)" scaext:wsdlLocation="../Processes/es_bs_payment/MakePayment.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

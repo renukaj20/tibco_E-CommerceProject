@@ -1,0 +1,278 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "CreateAccount",
+    "description" : "CreateAccount service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/DeactiveAccount" : {
+      "post" : {
+        "summary" : "postCreateAccount",
+        "description" : "postCreateAccount",
+        "operationId" : "post-DeactiveAccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/DeactiveAccountReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a DeactiveAccountResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/DeactiveAccountResp"
+            }
+          }
+        }
+      }
+    },
+    "/Updateaccount" : {
+      "post" : {
+        "summary" : "postCreateAccount",
+        "description" : "postCreateAccount",
+        "operationId" : "post-Updateaccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/UpdateAccountReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a UpdateAccountResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateAccountResp"
+            }
+          }
+        }
+      }
+    },
+    "/createaccount" : {
+      "post" : {
+        "summary" : "postCreateAccount",
+        "description" : "postCreateAccount",
+        "operationId" : "post-createaccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CreateAccountReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CreateAccountResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CreateAccountResp"
+            }
+          }
+        }
+      }
+    },
+    "/getAccountDetails" : {
+      "post" : {
+        "summary" : "postGetAccountDeatils",
+        "description" : "postGetAccountDetails",
+        "operationId" : "post-getAccountDetails",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/GetAccountDetailsReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetAccountDetailsResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetAccountDetailsResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "UpdateAccountResp" : {
+      "type" : "object",
+      "required" : [ "ResponseMsg" ],
+      "properties" : {
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateAccountResp" : {
+      "type" : "object",
+      "required" : [ "Firstname", "Email", "Address", "UserId", "Lastname", "Responsemsg", "Phonenumber", "Password", "ConfirmPassword" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        },
+        "Firstname" : {
+          "type" : "string"
+        },
+        "Lastname" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        },
+        "ConfirmPassword" : {
+          "type" : "string"
+        },
+        "Phonenumber" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        },
+        "Responsemsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetAccountDetailsReq" : {
+      "type" : "object",
+      "required" : [ "UserId" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "UpdateAccountReq" : {
+      "type" : "object",
+      "required" : [ "Firstname", "Email", "Address", "UserId", "Lastname", "Phonenumber", "Password" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        },
+        "Firstname" : {
+          "type" : "string"
+        },
+        "Lastname" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        },
+        "Phonenumber" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DeactiveAccountReq" : {
+      "type" : "object",
+      "required" : [ "UserId" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetAccountDetailsResp" : {
+      "type" : "object",
+      "required" : [ "Firstname", "Email", "Address", "UserId", "Lastname", "Responsemsg", "Phonenumber" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        },
+        "Firstname" : {
+          "type" : "string"
+        },
+        "Lastname" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Phonenumber" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        },
+        "Responsemsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DeactiveAccountResp" : {
+      "type" : "object",
+      "required" : [ "ResponseMsg" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        },
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateAccountReq" : {
+      "type" : "object",
+      "required" : [ "Firstname", "Email", "Address", "UserId", "ConfrimPassword", "Lastname", "Phonenumber", "Password" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        },
+        "Firstname" : {
+          "type" : "string"
+        },
+        "Lastname" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        },
+        "ConfrimPassword" : {
+          "type" : "string"
+        },
+        "Phonenumber" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        },
+        "SessionId" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

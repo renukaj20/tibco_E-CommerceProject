@@ -1,0 +1,86 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "MakePayment",
+    "description" : "MakePayment service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/makepayment" : {
+      "post" : {
+        "summary" : "postMakePayment",
+        "description" : "postMakePayment",
+        "operationId" : "post-makepayment",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/PaymentReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a PaymentResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/PaymentResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "PaymentReq" : {
+      "type" : "object",
+      "required" : [ "AccountHolderName", "ProductId", "ConfirmAccountNumber", "Balance", "AccountNumber" ],
+      "properties" : {
+        "ProductId" : {
+          "type" : "string"
+        },
+        "TransactionId" : {
+          "type" : "string"
+        },
+        "AccountHolderName" : {
+          "type" : "string"
+        },
+        "AccountNumber" : {
+          "type" : "string"
+        },
+        "ConfirmAccountNumber" : {
+          "type" : "string"
+        },
+        "Ifsc_Code" : {
+          "type" : "string"
+        },
+        "Branch" : {
+          "type" : "string"
+        },
+        "Balance" : {
+          "type" : "string"
+        },
+        "Phonenumber" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentResp" : {
+      "type" : "object",
+      "required" : [ "Status" ],
+      "properties" : {
+        "Status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

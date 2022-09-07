@@ -1,0 +1,80 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ValidateSession",
+    "description" : "ValidateSession service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/validatesession" : {
+      "post" : {
+        "summary" : "postValidateSession",
+        "description" : "postValidateSession",
+        "operationId" : "post-validatesession",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/ValidatesessionReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a ValidatesessionResp to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ValidatesessionResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ValidatesessionReq" : {
+      "type" : "object",
+      "required" : [ "UserId", "SessionId" ],
+      "properties" : {
+        "UserId" : {
+          "type" : "string"
+        },
+        "SessionId" : {
+          "type" : "string"
+        },
+        "TransactionId" : {
+          "type" : "string"
+        },
+        "ReqTimeStamp" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ValidatesessionResp" : {
+      "type" : "object",
+      "required" : [ "UserId", "Responsemsg", "SessionId" ],
+      "properties" : {
+        "SessionId" : {
+          "type" : "string"
+        },
+        "Responsemsg" : {
+          "type" : "string"
+        },
+        "UserId" : {
+          "type" : "string"
+        },
+        "TransactionId" : {
+          "type" : "string"
+        },
+        "RespTimestamp" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

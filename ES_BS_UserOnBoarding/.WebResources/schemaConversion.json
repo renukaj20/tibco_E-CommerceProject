@@ -1,0 +1,6 @@
+{"records": [{
+    "jsonSchemaLocation": "/ES_BS_UserOnBoarding/Service Descriptors/es_bs_useronboarding.Account_UseronBoarding-CreateAccount.json",
+    "conversionType": "linked",
+    "xsdSchemaLocation": "/ES_Common_Model/Schemas/ES_SessionHander.xsd",
+    "xsdSchemaTargetNamespace": "http://www.eniquesolutions/ES_SessionHander"
+}]}

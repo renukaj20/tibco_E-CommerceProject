@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolutions.com/ES_BS_OrderManagement" elementFormDefault="qualified" targetNamespace="http://www.eniquesolutions.com/ES_BS_OrderManagement" xmlns:Q1="http://www.eniquesolutions.com/Es_ProductManagement" xmlns:pref="http://www.eniquesolutions/ES_SessionHander">
+        
+ 
+    <complexType name="createOrderReqType">
+            	
+    
+    <sequence>
+                		
+      
+      <element maxOccurs="1" minOccurs="1" name="ORDER_ID" type="string"/>
+                		
+      
+      <element maxOccurs="1" minOccurs="1" name="CUSTOMER_ID" type="string"/>
+                		
+      
+      <element name="PRODUCT_ID" type="string"/>
+                		
+      
+      <element name="QUANTITY" type="string"/>
+                		
+      
+      <element name="LIST_PRICE" type="string"/>
+                		
+      
+      <element name="DISCOUNT" type="string"/>
+                		
+      
+      <element name="ORDER_STATUS" type="string"/>
+                		
+      
+      <element name="ORDER_DATE" type="string"/>
+                		
+      
+      <element name="REQUIRED_DATE" type="string"/>
+                		
+      
+      <element name="SHIPPED_DATE" type="string"/>
+                	
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+  
+  <complexType name="createOrderRespType">
+           
+    	
+    
+    <sequence>
+                		
+      
+      <element maxOccurs="1" minOccurs="1" name="ORDER_ID" type="string">
+    		</element>
+                		
+      
+      <element maxOccurs="1" minOccurs="1" name="CUSTOMER_ID" type="string">
+    		</element>
+                		
+      
+      <element name="PRODUCT_ID" type="string"/>
+                		
+      
+      <element name="QUANTITY" type="string"/>
+                		
+      
+      <element name="LIST_PRICE" type="string"/>
+                		
+      
+      <element name="DISCOUNT" type="string"/>
+                		
+      
+      <element name="ORDER_STATUS" type="string"/>
+                		
+      
+      <element name="ORDER_DATE" type="string"/>
+                		
+      
+      <element name="REQUIRED_DATE" type="string"/>
+                		
+      
+      <element name="SHIPPED_DATE" type="string"/>
+                		
+      
+      <element name="ResponseMsg" type="string"/>
+                	
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+  
+  <element name="createOrderReq" type="tns:createOrderReqType"/>
+        
+    
+  
+  <element name="createOrderResp" type="tns:createOrderRespType"/>
+        
+  
+  <complexType name="GetorderReqType">
+            	
+    
+    <sequence>
+                		
+      
+      <element name="ORDER_ID" type="string"/>
+                	
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+    
+  
+  <complexType name="GetOrderRespType">
+            
+    
+    <sequence>
+                	
+      
+      <element maxOccurs="1" minOccurs="1" name="ORDER_ID" type="string">
+    	</element>
+                	
+      
+      <element maxOccurs="1" minOccurs="1" name="CUSTOMER_ID" type="string">
+    	</element>
+                	
+      
+      <element name="PRODUCT_ID" type="string"/>
+                	
+      
+      <element name="QUANTITY" type="string"/>
+                	
+      
+      <element name="LIST_PRICE" type="string"/>
+                	
+      
+      <element name="DISCOUNT" type="string"/>
+                	
+      
+      <element name="ORDER_STATUS" type="string"/>
+                	
+      
+      <element name="ORDER_DATE" type="string"/>
+                	
+      
+      <element name="REQUIRED_DATE" type="string"/>
+                	
+      
+      <element name="SHIPPED_DATE" type="string"/>
+                	
+      
+      <element name="ResponseMsg" type="string"/>
+                
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+  
+  <complexType name="UpdateorderReqType">
+            
+    
+    <sequence>
+                		
+      
+      <element maxOccurs="1" minOccurs="1" name="ORDER_ID" type="string"/>
+                		
+      
+      <element maxOccurs="1" minOccurs="1" name="CUSTOMER_ID" type="string"/>
+                		
+      
+      <element name="PRODUCT_ID" type="string"/>
+                		
+      
+      <element name="QUANTITY" type="string"/>
+                		
+      
+      <element name="LIST_PRICE" type="string"/>
+                		
+      
+      <element name="DISCOUNT" type="string"/>
+                		
+      
+      <element name="ORDER_STATUS" type="string"/>
+                		
+      
+      <element name="ORDER_DATE" type="string"/>
+                		
+      
+      <element name="REQUIRED_DATE" type="string"/>
+                		
+      
+      <element name="SHIPPED_DATE" type="string"/>
+                	
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+  
+  <complexType name="UpdateorderRespType">
+            	
+    
+    <sequence>
+                		
+      
+      <element name="ResponseMsg" type="string"/>
+                	
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+    
+  
+  <element name="GetorderReq" type="tns:GetorderReqType"/>
+        
+  
+  <element name="GetorderResp" type="tns:GetOrderRespType"/>
+        
+  
+  <element name="UpdateorderReq" type="tns:UpdateorderReqType"/>
+        
+    
+  
+  <element name="UpdateorderResp" type="tns:UpdateorderRespType"/>
+        
+  
+  <complexType name="CancelOrderReqType">
+            	
+    
+    <sequence>
+                		
+      
+      <element name="ORDER_ID" type="string"/>
+                	
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+  
+  <complexType name="CancelorderRespType">
+            	
+    
+    <sequence>
+                		
+      
+      <element name="ResponseMsg" type="string"/>
+                	
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+  
+  <element name="CancelOrderReq" type="tns:CancelOrderReqType"/>
+        
+  
+  <element name="CancelOrderResp" type="tns:CancelorderRespType"/>
+        
+  
+        
+  
+    
+    
+      
+  
+
+  <complexType name="GetorderHistoryReqType">
+  	<sequence>
+
+  		<element name="StartRecord" type="string"></element>
+  		<element name="EndRecord" type="string"></element>
+  	</sequence>
+  </complexType>
+
+  <complexType name="GetorderHistoryRespType">
+
+
+
+
+
+  	<sequence>
+  		<element name="Order" type="tns:GetOrderRespType" maxOccurs="unbounded" minOccurs="0"></element>
+  	</sequence>
+  </complexType>
+
+
+  <element name="GetorderHistoryReq"
+  	type="tns:GetorderHistoryReqType">
+  </element>
+
+  <element name="getorderHistoryResp"
+  	type="tns:GetorderHistoryRespType">
+  </element>
+
+
+
+
+  <complexType name="FaultType">
+  	<sequence>
+  		<element name="Message" type="string"></element>
+  	</sequence>
+  </complexType>
+
+  <element name="Fault" type="tns:FaultType"></element>
+</schema>
